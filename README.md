@@ -111,7 +111,7 @@
 1. 지역 저장소를 검색한다. 찾는 라이브러리가 없을 경우 2단계로 넘어간다.
 2. 중앙 저장소를 검색한다. 찾은 라이브러리는 지역 저장소에 저장한다. 만약 찾는 라이브러리가 없을 경우 3단계로 넘어간다. 원격 저장소가 없을경우 에러를 발생하고 종료한다.
 3. 원격 저장소를 검색한다. 찾은 라이브러리는 지역 저장소에 저장한다. 찾는 라이브러리가 없는경우 에러를 발생하고 종료한다.
-
+```
 <dependencies>
 <dependency>
 <groupId>junit</groupId>
@@ -120,7 +120,8 @@
 <scope>test</scope>
 </dependency>
 </dependencies>
-이렇게 작성된 코드가 있고 중앙 저장소에서 찾을 경우 groupId/artifactId/version에 존재하는 파일명 : ${artifactId}-${version}.jar 최종적으로 http://repo1.maven.org/maven2/junit/juint/3.8/junit-3.8.jar 파일을 다운로드한
+```
+- 이렇게 작성된 코드가 있고 중앙 저장소에서 찾을 경우 groupId/artifactId/version에 존재하는 파일명 : ${artifactId}-${version}.jar 최종적으로 http://repo1.maven.org/maven2/junit/juint/3.8/junit-3.8.jar 파일을 다운로드한
 
 ● 위의 방법으로 할 때 중앙 저장소에서 관리하는 라이브러리의 수가 한두개가 아니라 이렇게 추가하는 것에는 한계가 있기 때문에 검색이 필요하다.
 - http://mvnrepository.com/
@@ -191,6 +192,7 @@
  - servlet-context.xml파일에 설정
 
 ● web.xml에 ContextLoaderListner, DispactcherServlet를 사용하여 ApplicationContext 생성
+```
 - <context-param>
    <param-name>contextconfigLocation</param-name>
    <param-value>/WEB-INF/spring/root-context.xml</param-value>
@@ -204,7 +206,7 @@
    <init-param>
       <param-name>contextconfigLocation</param-name>
       <param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
-
+```
 ● Dependency Injection
 - xml기반 설정 : XML파일을 사용하는 <Bean>요소를 정의하는 방법
 - Annotation 기반 설정 : @Component 애너테이션이 부여된 클래스를 DI컨테이너가 Bean으로 자동으로 등록하는 방법
