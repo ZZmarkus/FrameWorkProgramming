@@ -193,19 +193,23 @@
 
 ● web.xml에 ContextLoaderListner, DispactcherServlet를 사용하여 ApplicationContext 생성
 ```
-- <context-param>
-   <param-name>contextconfigLocation</param-name>
-   <param-value>/WEB-INF/spring/root-context.xml</param-value>
-  </context-param>
-  <listener>
-   <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
-  <servlet>
-   <servlet-name>appServlet</servlet-name>
-   <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-   <init-param>
-      <param-name>contextconfigLocation</param-name>
-      <param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+<context-param>
+    <param-name>contextconfigLocation</param-name>
+    <param-value>/WEB-INF/spring/root-context.xml</param-value>
+</context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>appServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+        <param-name>contextconfigLocation</param-name>
+        <param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+    </servlet>
+    ......
 ```
 ● Dependency Injection
 - xml기반 설정 : XML파일을 사용하는 <Bean>요소를 정의하는 방법
