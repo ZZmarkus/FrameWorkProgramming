@@ -113,12 +113,12 @@
 3. 원격 저장소를 검색한다. 찾은 라이브러리는 지역 저장소에 저장한다. 찾는 라이브러리가 없는경우 에러를 발생하고 종료한다.
 ```
 <dependencies>
-<dependency>
-<groupId>junit</groupId>
-<artifactId>junit</artifactId>
-<version>3.8.1</version>
-<scope>test</scope>
-</dependency>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>3.8.1</version>
+        <scope>test</scope>
+    </dependency>
 </dependencies>
 ```
 - 이렇게 작성된 코드가 있고 중앙 저장소에서 찾을 경우 groupId/artifactId/version에 존재하는 파일명 : ${artifactId}-${version}.jar 최종적으로 http://repo1.maven.org/maven2/junit/juint/3.8/junit-3.8.jar 파일을 다운로드한
