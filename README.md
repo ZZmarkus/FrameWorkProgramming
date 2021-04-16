@@ -351,7 +351,7 @@ public List<StudentVO> readList() throws Exception {
    }); 
 return studentlist;
 }
-
+```
 ● INSERT / UPDATE / DELETE문
 - update 메소드만을 사용
 1. INSERT문
