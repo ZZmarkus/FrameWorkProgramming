@@ -273,7 +273,7 @@
    <property name="password" value="passwd" />
    <property name="maxActive" value="5" />
 </bean>
-
+```
 ● JDBC의 문제점
 - 대량의 소스코드를 기술
 - 다양한 에러 원인을 파악하기 위한 코딩이 필요
