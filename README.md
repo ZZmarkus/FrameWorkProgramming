@@ -83,35 +83,35 @@
     - 빌드 작업들을 간단하고 쉽게 그리고 일관성 있게 수행할 수 있는 통합 환경을 제공
     - 빌드는 소스코드 파일을 실행 코드로 변환하여 베포하는 과정
 
-● 프로젝트 관리기능
-- 정형화된 프로젝트 디렉토리 구조관리(po,.xml) : 설정보다는 규범, Convention over Configuration(CoC)패러다임을 따름
-- 의존성 관리기능 : 편리한 라이브러리 관리 기능(pom.xml, Repositorty) : 프로젝트 빌드에 필요한 라이브러리, 플러그인을 개발자 PC에 자동으로 다운로드
-- 빌드 프로세스를 관리(pom.xml) : 플러그인 설정을 통해 빌드 자동화
+- 프로젝트 관리기능
+    - 정형화된 프로젝트 디렉토리 구조관리(po,.xml) : 설정보다는 규범, Convention over Configuration(CoC)패러다임을 따름
+    - 의존성 관리기능 : 편리한 라이브러리 관리 기능(pom.xml, Repositorty) : 프로젝트 빌드에 필요한 라이브러리, 플러그인을 개발자 PC에 자동으로 다운로드
+    - 빌드 프로세스를 관리(pom.xml) : 플러그인 설정을 통해 빌드 자동화
 
-● 의존관계(라이브러리) 설정(pom.xml)
-- 프로젝트 당 한개의 pom.xml파일 관리
-- 최상위 엘리먼트(root element) : project
-- 3개의 필수 필드를 가진다
-->groupId : 프로젝트 조직 고유 도메인 예) org.kpu
-->artifactId : 프로젝트 명 예) myhomework
-->version : 프로젝트 버전
-- 프로젝트 의존관계의 라이브러리 관리 : dependency
+- 의존관계(라이브러리) 설정(pom.xml)
+    - 프로젝트 당 한개의 pom.xml파일 관리
+    - 최상위 엘리먼트(root element) : project
+    - 3개의 필수 필드를 가진다
+    >groupId : 프로젝트 조직 고유 도메인 예) org.kpu
+    >artifactId : 프로젝트 명 예) myhomework
+    >version : 프로젝트 버전
+    - 프로젝트 의존관계의 라이브러리 관리 : dependency
 
-● 프로젝트 빌드 설정
-- 프로젝트 기본정보, 저장소, 프로퍼티, 디렉토리 구조
-- 플로그인
-- 골
+- 프로젝트 빌드 설정
+    - 프로젝트 기본정보, 저장소, 프로퍼티, 디렉토리 구조
+    - 플로그인
+    - 골
 
-● Maven Repository
-- 메이븐 저장소는 프로젝트에 사용되는 프로젝트 jar파일, 라이브러리 jar파일들이 위치하며 3가지 타입이 있다.
-1. 지역(local)저장소 : 메이븐을 빌드할 때 다운로드하는 라이브러리, 플로기은을 관리하는 저장소
-2. 중앙(central)저장소 : 오픈 소스 라이브러리, 메이븐 플러그인, 메이븐 아키타입을 관리하는 저장소
-3. 원격(remote)저장소 : 중앙저장소에 존재하지 않는 라이브러리를 관리하기 위하여 별도의 메이븐 저장소를 설치해 관리하는것이 가능
+- Maven Repository
+    - 메이븐 저장소는 프로젝트에 사용되는 프로젝트 jar파일, 라이브러리 jar파일들이 위치하며 3가지 타입이 있다.
+        1. 지역(local)저장소 : 메이븐을 빌드할 때 다운로드하는 라이브러리, 플로기은을 관리하는 저장소
+        2. 중앙(central)저장소 : 오픈 소스 라이브러리, 메이븐 플러그인, 메이븐 아키타입을 관리하는 저장소
+        3. 원격(remote)저장소 : 중앙저장소에 존재하지 않는 라이브러리를 관리하기 위하여 별도의 메이븐 저장소를 설치해 관리하는것이 가능
 
-● 메이븐 의존성 검색 절차
-1. 지역 저장소를 검색한다. 찾는 라이브러리가 없을 경우 2단계로 넘어간다.
-2. 중앙 저장소를 검색한다. 찾은 라이브러리는 지역 저장소에 저장한다. 만약 찾는 라이브러리가 없을 경우 3단계로 넘어간다. 원격 저장소가 없을경우 에러를 발생하고 종료한다.
-3. 원격 저장소를 검색한다. 찾은 라이브러리는 지역 저장소에 저장한다. 찾는 라이브러리가 없는경우 에러를 발생하고 종료한다.
+- 메이븐 의존성 검색 절차
+    1. 지역 저장소를 검색한다. 찾는 라이브러리가 없을 경우 2단계로 넘어간다.
+    2. 중앙 저장소를 검색한다. 찾은 라이브러리는 지역 저장소에 저장한다. 만약 찾는 라이브러리가 없을 경우 3단계로 넘어간다. 원격 저장소가 없을경우 에러를 발생하고 종료한다.
+    3. 원격 저장소를 검색한다. 찾은 라이브러리는 지역 저장소에 저장한다. 찾는 라이브러리가 없는경우 에러를 발생하고 종료한다.
 ```
 <dependencies>
     <dependency>
@@ -124,75 +124,75 @@
 ```
 - 이렇게 작성된 코드가 있고 중앙 저장소에서 찾을 경우 groupId/artifactId/version에 존재하는 파일명 : ${artifactId}-${version}.jar 최종적으로 http://repo1.maven.org/maven2/junit/juint/3.8/junit-3.8.jar 파일을 다운로드한
 
-● 위의 방법으로 할 때 중앙 저장소에서 관리하는 라이브러리의 수가 한두개가 아니라 이렇게 추가하는 것에는 한계가 있기 때문에 검색이 필요하다.
-- http://mvnrepository.com/
+- 위의 방법으로 할 때 중앙 저장소에서 관리하는 라이브러리의 수가 한두개가 아니라 이렇게 추가하는 것에는 한계가 있기 때문에 검색이 필요하다.
+    - http://mvnrepository.com/
 
-● 의존 라이브러리 적용 스코프(의존 라이브러리를 적용할 수 있는 시점을 제한할 수있다.)
-- compile : 스코프를 설정하지 않았을 때의 기본 스코프
-- provided : 컴파일시에는 직접 의존성을 참조하고 런타임시에는 다른 환경에서 의존성을 제공받는다.(해당 컨테이너의 서블릿 API)
-- runtime : 컴파일 시에는 사용되지 않지만 애플리케이션을 실행할 때 사용되는 라이브러리일 경우 설정한다.
-- test : 테스트하는 시점에만 사용하는 라이브러리에 대한 스코프를 설정할 때 사용한다. (Junit)
-- system : provided와 비슷하다. 단지 우리가 직접 jar파일을 제공해야 한다.
-- import : 다른 POM설정 파일에 정의되어 있는 의존 관계 설정을 현재 프로젝트로 가져온다. 이 범위는 <dependencyManagement/>엘리먼트에서만 사용 가능하다.
+- 의존 라이브러리 적용 스코프(의존 라이브러리를 적용할 수 있는 시점을 제한할 수있다.)
+    - compile : 스코프를 설정하지 않았을 때의 기본 스코프
+    - provided : 컴파일시에는 직접 의존성을 참조하고 런타임시에는 다른 환경에서 의존성을 제공받는다.(해당 컨테이너의 서블릿 API)
+    - runtime : 컴파일 시에는 사용되지 않지만 애플리케이션을 실행할 때 사용되는 라이브러리일 경우 설정한다.
+    - test : 테스트하는 시점에만 사용하는 라이브러리에 대한 스코프를 설정할 때 사용한다. (Junit)
+    - system : provided와 비슷하다. 단지 우리가 직접 jar파일을 제공해야 한다.
+    - import : 다른 POM설정 파일에 정의되어 있는 의존 관계 설정을 현재 프로젝트로 가져온다. 이 범위는 <dependencyManagement/>엘리먼트에서만 사용 가능하다.
 
-● 메이븐은 소프트웨어 빌드를 위한 공통 인터페이스를 제공하는 프레임워크
-- 플러그인 설정을 통해 기능을 위임
-- 빌드단계(컴파일, 테스트, 패키징, 배포)들을 빌드 라이프 사이클이라고 한다.
-- 각 빌드 단계에서 수행되는 작업을 골(Goal)이라고 한다.
-- 실제 골은 그 단게에 연결된 플러그인(Plugin)에 의해 실행된다.
+- 메이븐은 소프트웨어 빌드를 위한 공통 인터페이스를 제공하는 프레임워크
+    - 플러그인 설정을 통해 기능을 위임
+    - 빌드단계(컴파일, 테스트, 패키징, 배포)들을 빌드 라이프 사이클이라고 한다.
+    - 각 빌드 단계에서 수행되는 작업을 골(Goal)이라고 한다.
+    - 실제 골은 그 단게에 연결된 플러그인(Plugin)에 의해 실행된다.
 
-● 메이븐 빌드 라이프사이클
-- Maven은 기본, clean, site 3개의 라이프사이클이 있다.
-- 기본 : 여러 단계의 페이지로 나뉘어져 있으며, 각 페이지는 의존관계를 갖는다. Compile, test, package deploy 순서로 진행된다.
-- clean : clean페이지를 이용하여 이전 빌드에서 생성된 모든 파일들을 삭제한다.
-- site : site, site-deploy페이지를 이용하여 생성된 문서들을 대상 사이트에 배포한다.
+- 메이븐 빌드 라이프사이클
+    - Maven은 기본, clean, site 3개의 라이프사이클이 있다.
+    - 기본 : 여러 단계의 페이지로 나뉘어져 있으며, 각 페이지는 의존관계를 갖는다. Compile, test, package deploy 순서로 진행된다.
+    - clean : clean페이지를 이용하여 이전 빌드에서 생성된 모든 파일들을 삭제한다.
+    - site : site, site-deploy페이지를 이용하여 생성된 문서들을 대상 사이트에 배포한다.
 
 ## 📌 3장 스프링 DI
-● DI(Dependency Injection)
-- 의존관계를 주입하는 것으로 오브젝트 간의 의존관계를 만들고 객체간의 결합도를 낮춘다. 스프링 프레임 워크에서는 런타임시 사용할 객체들의 의존관계를 부여한다.
+- DI(Dependency Injection)
+    - 의존관계를 주입하는 것으로 오브젝트 간의 의존관계를 만들고 객체간의 결합도를 낮춘다. 스프링 프레임 워크에서는 런타임시 사용할 객체들의 의존관계를 부여한다.
 
-● IoC(Inversion of Control)
-- 역전제어, 즉 인스턴스를 제어하는 주도권이 역전된다는 의미이다. 역전제어는 컴포넌트를 구성하는 인스턴스 생성과 의존관계 연결을 개발자의 소스코드가 아닌 DI컨테이너가 대신해 주기 때문에 제어가 역전되었다고 정의한다.
+- IoC(Inversion of Control)
+    - 역전제어, 즉 인스턴스를 제어하는 주도권이 역전된다는 의미이다. 역전제어는 컴포넌트를 구성하는 인스턴스 생성과 의존관계 연결을 개발자의 소스코드가 아닌 DI컨테이너가 대신해 주기 때문에 제어가 역전되었다고 정의한다.
 
-● IoC컨테이너
-- 인스턴스의 생명주기 관리 및 의존관계 주입을 처리한다.
+- IoC컨테이너
+    - 인스턴스의 생명주기 관리 및 의존관계 주입을 처리한다.
 
-● 일반적인 애플리케이션에서의 의존 관리
-- new 연산자를 사용
+- 일반적인 애플리케이션에서의 의존 관리
+    - new 연산자를 사용
 
-● DI컨테이너를 활용한 애플리케이션
-- new 연산자를 제거하고 인터페이스 기반의 컴포넌트화
-- memberDao 인스턴스를 MemberService에 인젝션하여 의존관계를 주입한다.
-- 인터페이스 기반의 컴포넌트화를 실현하려면 ProductService와 ProductDao를 인터페이스로 하고 그 구현클래스는 인터페이스 이름에 Impl을 덧붙인다.
+- DI컨테이너를 활용한 애플리케이션
+    - new 연산자를 제거하고 인터페이스 기반의 컴포넌트화
+    - memberDao 인스턴스를 MemberService에 인젝션하여 의존관계를 주입한다.
+    - 인터페이스 기반의 컴포넌트화를 실현하려면 ProductService와 ProductDao를 인터페이스로 하고 그 구현클래스는 인터페이스 이름에 Impl을 덧붙인다.
 
-● 스프링 빈
-- 스프링 컨테이너가 관리하는 객체
+- 스프링 빈
+    - 스프링 컨테이너가 관리하는 객체
 
-● IoC컨테이너
-- 스프링 빈의 생성, 관계, 조립, 생명주기를 관리하는 스프링 프레임워크의 핵심
+- IoC컨테이너
+    - 스프링 빈의 생성, 관계, 조립, 생명주기를 관리하는 스프링 프레임워크의 핵심
 
-● 스프링 컨테이너 종류
-- BeanFactory(org.Springframework.beans.factory.BeanFactory)
-- ApplicationContext(org.Springframework.context.ApplicationContext)
+- 스프링 컨테이너 종류
+    - BeanFactory(org.Springframework.beans.factory.BeanFactory)
+    - ApplicationContext(org.Springframework.context.ApplicationContext)
 
-● BeanFactory
-- 빈의 생성, 빈의 의존관계 관리 등의 DI의 기본 기능을 제공
+- BeanFactory
+    - 빈의 생성, 빈의 의존관계 관리 등의 DI의 기본 기능을 제공
 
-● ApplicationContext
-- 일반적인 스프링 컨테이너를 의미
+- ApplicationContext
+    - 일반적인 스프링 컨테이너를 의미
 
-● WebApplicationContext
-- 2가지 종류의 WebApplicationContext(WAC)
-1. ContextLoaderListner에 의해 생성되는 WAC
- - Persistence(DAO), Service관련 스프링 빈들을 등록
- - 웹 애플리케이션 전체에서 사용할 WAC객체 생성
- - root-context.xml파일에 설정
-2. DispatcherServlet에 의해 생성되는 WAC
- - 컨트롤러와 같은 서블릿 관련 빈을 등록
- - 해당 서블릿 마다 사용할 WAC 객체 생성
- - servlet-context.xml파일에 설정
+- WebApplicationContext
+    - 2가지 종류의 WebApplicationContext(WAC)
+    1. ContextLoaderListner에 의해 생성되는 WAC
+        - Persistence(DAO), Service관련 스프링 빈들을 등록
+        - 웹 애플리케이션 전체에서 사용할 WAC객체 생성
+        - root-context.xml파일에 설정
+    2. DispatcherServlet에 의해 생성되는 WAC
+        - 컨트롤러와 같은 서블릿 관련 빈을 등록
+        - 해당 서블릿 마다 사용할 WAC 객체 생성
+         - servlet-context.xml파일에 설정
 
-● web.xml에 ContextLoaderListner, DispactcherServlet를 사용하여 ApplicationContext 생성
+- web.xml에 ContextLoaderListner, DispactcherServlet를 사용하여 ApplicationContext 생성
 ```
 <context-param>
     <param-name>contextconfigLocation</param-name>
@@ -212,12 +212,12 @@
     </servlet>
     ......
 ```
-● Dependency Injection
-- xml기반 설정 : XML파일을 사용하는 <Bean>요소를 정의하는 방법
-- Annotation 기반 설정 : @Component 애너테이션이 부여된 클래스를 DI컨테이너가 Bean으로 자동으로 등록하는 방법
-- java기반 설정 : 자바클래스에 @Configuration애너테이션을, 매서드에 @Bean 애너테이션을 사용해 Bean을 등록하는 방법
+- Dependency Injection
+    - xml기반 설정 : XML파일을 사용하는 <Bean>요소를 정의하는 방법
+    - Annotation 기반 설정 : @Component 애너테이션이 부여된 클래스를 DI컨테이너가 Bean으로 자동으로 등록하는 방법
+    - java기반 설정 : 자바클래스에 @Configuration애너테이션을, 매서드에 @Bean 애너테이션을 사용해 Bean을 등록하는 방법
 
-● xml DI
+- xml DI
 ```
 <bean id="memberDAO"class="org.kpu.di.persistence.MemberDAOImpl">
 </bean>
@@ -232,31 +232,31 @@
 -->
 ```
 
-● Annotation DI (context:annotation-config)
-- 이 선언을 사용하면 BeanPostprocessor가 자동으로 등록되어 @component를 선언할 필요가 없다.
+- Annotation DI (context:annotation-config)
+    - 이 선언을 사용하면 BeanPostprocessor가 자동으로 등록되어 @component를 선언할 필요가 없다.
 
-● JAVA DI
-- xml문법 대신 자바 코드로 빈을 설정한다.
-- 타사의 외부 라이브러리를 사용하여 DI하고자 할 경우에는 소스를 가지고 있지 않고 있기 때문에 애노테이션을 이용하는 방법은 불가능하다 -> XML로 설정
-- 컨테이너 생성 클래스 : AnnotationConfigApplicationContext
+- JAVA DI
+    - xml문법 대신 자바 코드로 빈을 설정한다.
+    - 타사의 외부 라이브러리를 사용하여 DI하고자 할 경우에는 소스를 가지고 있지 않고 있기 때문에 애노테이션을 이용하는 방법은 불가능하다 -> XML로 설정
+    - 컨테이너 생성 클래스 : AnnotationConfigApplicationContext
 
-● @Configuration
-- 빈 설정 메타 정보를 담고 있는 클래스를 선언
+- @Configuration
+    - 빈 설정 메타 정보를 담고 있는 클래스를 선언
 
-● @Bean
-- 클래스 내의 매서드를 정의하여 새로운 빈 객체를 정의할 때 사용
+- @Bean
+    - 클래스 내의 매서드를 정의하여 새로운 빈 객체를 정의할 때 사용
 
 ## 📌 4장 스프링 JDBC
-● 데이터 액세스 층의 역할
-- 데이터 액세스 처리를 비즈니스 로직 층에서 분리하는 것
+- 데이터 액세스 층의 역할
+    - 데이터 액세스 처리를 비즈니스 로직 층에서 분리하는 것
 
-● DAO(Data Access Object)
-- 데이터 액세스 처리에 특화된 오브젝트
+- DAO(Data Access Object)
+    - 데이터 액세스 처리에 특화된 오브젝트
 
-● 데이터 소스
-- 데이터 액세스 기술 종류와 상관없이 데이터베이스 접속을 관리해주는 인터페이스
+- 데이터 소스
+    - 데이터 액세스 기술 종류와 상관없이 데이터베이스 접속을 관리해주는 인터페이스
 
-● 데이터 소스 구현 (Pom.xml)
+- 데이터 소스 구현 (Pom.xml)
 ```
 <dependency>
    <groupId>commons-dbcp</groupId>
@@ -265,7 +265,7 @@
 </dependency>
 ```
 
-● 서드 파티가 제공하는 데이터 소스(applicationContext.xml)
+- 서드 파티가 제공하는 데이터 소스(applicationContext.xml)
 ```
 <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
    <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
@@ -275,122 +275,122 @@
    <property name="maxActive" value="5" />
 </bean>
 ```
-● JDBC의 문제점
-- 대량의 소스코드를 기술
-- 다양한 에러 원인을 파악하기 위한 코딩이 필요
-- 데이터베이스 제품마다 에러 코드가 달라서 코드의 일관성 유지가 어려움
+- JDBC의 문제점
+    - 대량의 소스코드를 기술
+    - 다양한 에러 원인을 파악하기 위한 코딩이 필요
+    - 데이터베이스 제품마다 에러 코드가 달라서 코드의 일관성 유지가 어려움
 
-● 스프링 JDBC
-- JDBC를 래핑한 API를 제공해 소스코드를 단순화
+- 스프링 JDBC
+    - JDBC를 래핑한 API를 제공해 소스코드를 단순화
 
-● SELECT문 (취득 결과가 레코드 건수 또는 특정 컬럼만 취득할 경우)
-1. queryForObject 메소드 사용
-- 제1인수 : SQL문자열
-- 제2인수 : 반환형 클래스 오브젝트(int)
-```
-JdbcTemplate jdbcTemplate = ctx.getBean(JdbcTemplate.class);
-int count = jdbcTemplate.queryForObject("SELECT COUNT(*) FROM STUDENT", Integer.class);
-```
+- SELECT문 (취득 결과가 레코드 건수 또는 특정 컬럼만 취득할 경우)
+    1. queryForObject 메소드 사용
+        - 제1인수 : SQL문자열
+        - 제2인수 : 반환형 클래스 오브젝트(int)
+        ```
+        JdbcTemplate jdbcTemplate = ctx.getBean(JdbcTemplate.class);
+        int count = jdbcTemplate.queryForObject("SELECT COUNT(*) FROM STUDENT", Integer.class);
+        ```
 
-2. queryForObject 메소드 사용
-- 제1인수 : SQL문자열
-- 제2인수 : 반환형 클래스 오브젝트(String)
-- 제3인수 : 파라미터 값
-```
-String name = jdbcTemplate.queryForObject("SELECT username FROM STUDENT WHERE id=?", String.class, id);
-```
+    2. queryForObject 메소드 사용
+        - 제1인수 : SQL문자열
+        - 제2인수 : 반환형 클래스 오브젝트(String)
+        - 제3인수 : 파라미터 값
+        ```
+        String name = jdbcTemplate.queryForObject("SELECT username FROM STUDENT WHERE id=?", String.class, id);
+        ```
 
-● SELECT문 (취득 결과가 한 레코드 값을 취득할 경우)
-1. queryForMap 메소드 : 한 레코드 값을 Map(컬럼 이름을 키로 값을 저장)데이터로
-```
-Map<String, Object> student = jdbcTemplate.queryForMap("SELECT * FROM STUDENT WHERE id=?", id);
-String name = (String)student.get("username");
-```
+- SELECT문 (취득 결과가 한 레코드 값을 취득할 경우)
+    1. queryForMap 메소드 : 한 레코드 값을 Map(컬럼 이름을 키로 값을 저장)데이터로
+    ```
+    Map<String, Object> student = jdbcTemplate.queryForMap("SELECT * FROM STUDENT WHERE id=?", id);
+    String name = (String)student.get("username");
+    ```
 
-2. queryForList 메소드 : 여러 레코드 값을 Map데이터로
-```
-List<Map<String, Object>> studentList = jdbcTemplate.queryForMap("SELECT * FROM STUDENT");
-```
+    2. queryForList 메소드 : 여러 레코드 값을 Map데이터로
+    ```
+    List<Map<String, Object>> studentList = jdbcTemplate.queryForMap("SELECT * FROM STUDENT");
+    ```
 
-● SELECT문 (도메인으로 변환할 경우)
-- queryForObject메소드와 query메소드를 이용한다.
-- queryForObject 메소드 : 한 레코드를 가져올때
-- 제1인수 : SELECT문
-- 제2인수 : 도메인 자동변환을 위한 스프링 제공 클래스 BeanPropertyRowMapper
-- 제3인수 : SELECT문의 파라미터
-- BeanPropertyRowMapper를 사용할 경우 StudentVO의 프로퍼티 명과 테이블 컬럼 명이 같아야한다. 그렇지 않을 경우는 RowMapper 인터페이스를 구현해서 StudentVo로 변환처리 해야함
-```
-public StudentVO read(String id) throws Exception{
-   studentVO vo = null;
-   try{
-      vo = jdbcTemplate.queryForObject("SELECT * FROM STUDENT WHERE ID=?", new BeanPropertyRowMapper<StudentVO>(StudentVO.class), id);
-   catch(EmptyResultDataAccessException e){
-      return vo;
-   }
-   return vo;
-}
-```
+- SELECT문 (도메인으로 변환할 경우)
+    - queryForObject메소드와 query메소드를 이용한다.
+    - queryForObject 메소드 : 한 레코드를 가져올때
+    - 제1인수 : SELECT문
+    - 제2인수 : 도메인 자동변환을 위한 스프링 제공 클래스 BeanPropertyRowMapper
+    - 제3인수 : SELECT문의 파라미터
+    - BeanPropertyRowMapper를 사용할 경우 StudentVO의 프로퍼티 명과 테이블 컬럼 명이 같아야한다. 그렇지 않을 경우는 RowMapper 인터페이스를 구현해서 StudentVo로 변환처리 해야함
+    ```
+    public StudentVO read(String id) throws Exception{
+        studentVO vo = null;
+        try{
+        vo = jdbcTemplate.queryForObject("SELECT * FROM STUDENT WHERE ID=?", new BeanPropertyRowMapper<StudentVO>(StudentVO.class), id);
+        catch(EmptyResultDataAccessException e){
+        return vo;
+        }
+       return vo;
+    }
+    ```
 
-● SELECT문 (도메인으로 변환할 경우)
-- query메소드 : 여러 레코드를 가져올 때
-- RowMapper 인터페이스를 구현한 익명 클래스를 정의
-- 클래스내 mapRow()추상메소드를 정의
-```
-public List<StudentVO> readList() throws Exception {
-   List<StudentVO> studentlist = jdbcTemplate.query("SELECT * FROM STUDENT", new RowMapper<StudentVO>() {
-      public StudentVO mapRow(ResultSet rs, int rowNum) throws SQLException {
-         StudentVO vo = new StudentVO();
-         vo.setId(rs.getString("ID"));
-         vo.setPasswd(rs.getString("PASSWD"));
-         vo.setUsername(rs.getString("USERNAME"));
-         vo.setSnum(rs.getString("SNUM"));
-         vo.setDepart(rs.getString("DEPART"));
-         vo.setMobile(rs.getString("MOBILE"));
-         vo.setEmail(rs.getString("EMAIL"));
-         return vo;
-      }
-   }); 
-return studentlist;
-}
-```
-● INSERT / UPDATE / DELETE문
-- update 메소드만을 사용
-1. INSERT문
-```
-StudentVO vo;
-jdbcTemplate.update("INSERT INTO STUDENT (ID, PASSWD, USERNAME, SNUM, DEPART, MOBILE, EMAIL) VALUES(?,?,?,?,?,?,?)", vo.getId(), vo.getPasswd(), vo.getUsername(), vo.getSnum(), vo.getMobile(), vo.getEmail());
-```
+- SELECT문 (도메인으로 변환할 경우)
+    - query메소드 : 여러 레코드를 가져올 때
+    - RowMapper 인터페이스를 구현한 익명 클래스를 정의
+    - 클래스내 mapRow()추상메소드를 정의
+    ```
+    public List<StudentVO> readList() throws Exception {
+       List<StudentVO> studentlist = jdbcTemplate.query("SELECT * FROM STUDENT", new RowMapper<StudentVO>() {
+          public StudentVO mapRow(ResultSet rs, int rowNum) throws SQLException {
+             StudentVO vo = new StudentVO();
+            vo.setId(rs.getString("ID"));
+             vo.setPasswd(rs.getString("PASSWD"));
+             vo.setUsername(rs.getString("USERNAME"));
+             vo.setSnum(rs.getString("SNUM"));
+             vo.setDepart(rs.getString("DEPART"));
+             vo.setMobile(rs.getString("MOBILE"));
+             vo.setEmail(rs.getString("EMAIL"));
+             return vo;
+          }
+       }); 
+    return studentlist;
+    }
+    ```
+- INSERT / UPDATE / DELETE문
+    - update 메소드만을 사용
+    1. INSERT문
+    ```
+    StudentVO vo;
+    jdbcTemplate.update("INSERT INTO STUDENT (ID, PASSWD, USERNAME, SNUM, DEPART, MOBILE, EMAIL) VALUES(?,?,?,?,?,?,?)", vo.getId(), vo.getPasswd(), vo.getUsername(), vo.getSnum(), vo.getMobile(), vo.getEmail());
+    ```
 
-2. DELETE문
-```
-StudentVO vo;
-jdbcTemplate.update("DELETE FROM STUDENT WHERE ID=?", vo.getId());
-```
+    2. DELETE문
+    ```
+    StudentVO vo;
+    jdbcTemplate.update("DELETE FROM STUDENT WHERE ID=?", vo.getId());
+    ```
 
-● Junit을 이용한 스프링 테스트
-- 스프링 프레임워크에서 만든 클래스(@Controller, @Service, @Repository, @Componet등이 붙은 클래스)를 테스트하는 모듈
-- 단위테스트, 통합테스트를 지원하기 위한 매커니즘이나 편리한 기능을 제공한다.
+- Junit을 이용한 스프링 테스트
+    - 스프링 프레임워크에서 만든 클래스(@Controller, @Service, @Repository, @Componet등이 붙은 클래스)를 테스트하는 모듈
+    - 단위테스트, 통합테스트를 지원하기 위한 매커니즘이나 편리한 기능을 제공한다.
 
 ## 📌 5장 스프링 MVC
-● 스프링 MVC 설계 : 프론트 컨트롤러 패턴에 기초한 MVC 프레임워크
-● 약한 결합도로 구성되어 유연하고 확장하기 쉬움
-● 다양한 서드파티 라이브러리 연계를 지원
-● 애노테이션의 도입으로 스프링 MVC 보급이 확대됨
+- 스프링 MVC 설계 : 프론트 컨트롤러 패턴에 기초한 MVC 프레임워크
+- 약한 결합도로 구성되어 유연하고 확장하기 쉬움
+- 다양한 서드파티 라이브러리 연계를 지원
+- 애노테이션의 도입으로 스프링 MVC 보급이 확대됨
 
-● Model1 방식 : JSP만 사용하여 개발하거나 Java bean을 포함하여 개발하는 방식
-● Model2 방식 : Model - View - Controller로 분리
-● 프론트 컨트롤러 패턴 : 클라이언트 요청을 별도의 프롵느 컨트롤러에 집중
-● 프론트 컨트롤러 실행 프로세스
-1. DispatcherSerlet이 HTTP 요청을 받음
-2. DispatcherServlet은 서브 Controller로 HTTP요청 위임
-3. 서브 Controller는 클라이언트의 요청 처리를 위해 DAO 객체를 호출
-4. DAO 객체는 리소스를 엑세스하여 Model 객체를 생성 후 요청 결과 리턴
-5. DispatcherServlet은 처리 결과에 적합한 뷰에 화면 처리 요청
-6. 선택된 뷰는 화면에 모델 객체를 가져와 화면 처리
-7. HTTP응답
+- Model1 방식 : JSP만 사용하여 개발하거나 Java bean을 포함하여 개발하는 방식
+- Model2 방식 : Model - View - Controller로 분리
+- 프론트 컨트롤러 패턴 : 클라이언트 요청을 별도의 프롵느 컨트롤러에 집중
+- 프론트 컨트롤러 실행 프로세스
+    1. DispatcherSerlet이 HTTP 요청을 받음
+    2. DispatcherServlet은 서브 Controller로 HTTP요청 위임
+    3. 서브 Controller는 클라이언트의 요청 처리를 위해 DAO 객체를 호출
+    4. DAO 객체는 리소스를 엑세스하여 Model 객체를 생성 후 요청 결과 리턴
+    5. DispatcherServlet은 처리 결과에 적합한 뷰에 화면 처리 요청
+    6. 선택된 뷰는 화면에 모델 객체를 가져와 화면 처리
+    7. HTTP응답
 
-● MVC의 주요 구성요소
-- DispatcherServlet : 프론트 컨트롤러를 담당하고, 클라이언트의 요청을 받아서 Controller에게 클라이언트의 요청을 전달하고, 리턴 결과값을 View에 전달하여 알맞은 응답을 생성한다.
+- MVC의 주요 구성요소
+    - DispatcherServlet : 프론트 컨트롤러를 담당하고, 클라이언트의 요청을 받아서 Controller에게 클라이언트의 요청을 전달하고, 리턴 결과값을 View에 전달하여 알맞은 응답을 생성한다.
 
 - HandlerMapping : URL과 요청 정보를 기준으로 어떤 컨트롤러를 실행할지 결정하는 객체로 애노테이션을 이용할 때에는 mvn:annotation-driven태그를 설정해야 한다.
 
@@ -402,37 +402,37 @@ jdbcTemplate.update("DELETE FROM STUDENT WHERE ID=?", vo.getId());
 
 - View : Controller의 처리 결과 화면을 생성한다.
 
-● 스프링 스테리오타입 애노테이션
-- @Component : 일반적인 컴포넌트
-- @Repository : Persistence 계층 컴포넌트
-- @Service : Business(Service) 계층 컴포넌트
-- @Controller : Presentation 계층 컴포넌트
-- @RestController : @Controller + @ResponseBody
+- 스프링 스테리오타입 애노테이션
+    - @Component : 일반적인 컴포넌트
+    - @Repository : Persistence 계층 컴포넌트
+    - @Service : Business(Service) 계층 컴포넌트
+    - @Controller : Presentation 계층 컴포넌트
+    - @RestController : @Controller + @ResponseBody
 
-● 라이브러리 설정
-- spring-webmvc를 설정하면 스프링 웹과 기타 스프링 프레임워크 의존모듈(spring-context)에 대한 관계도 함께 처리
-- 스프링 MVC는 Bean Validation 구조체(hibernate-validator)를 이용해 자바 빈(VO)값의 유효성을 애노테이션을 통해 검중
-- pom.xml
-```
-<dependency>
-   <groupId>org.springframework</groupId>
-   <artifactId>spring-webmvc</artifactId>
-   <version>${org.springframework-version}</version>
-</dependency>
-<dependency>
-   <groupId>org.hibernate</groupId>
-   <artifactId>hibernate-validator</artifactId>
-   <version>6.1.2.Final</version>
-</dependency>
-```
+- 라이브러리 설정
+    - spring-webmvc를 설정하면 스프링 웹과 기타 스프링 프레임워크 의존모듈(spring-context)에 대한 관계도 함께 처리
+    - 스프링 MVC는 Bean Validation 구조체(hibernate-validator)를 이용해 자바 빈(VO)값의 유효성을 애노테이션을 통해 검중
+    - pom.xml
+    ```
+    <dependency>
+       <groupId>org.springframework</groupId>
+       <artifactId>spring-webmvc</artifactId>
+       <version>${org.springframework-version}</version>
+    </dependency>
+    <dependency>
+       <groupId>org.hibernate</groupId>
+       <artifactId>hibernate-validator</artifactId>
+       <version>6.1.2.Final</version>
+    </dependency>
+    ```
 
-● ContextLoadListner클래스
-- 서비스 계층 이하의 빈(@Service, @Repository 등)을 등록하기 위한 클래스
+- ContextLoadListner클래스
+    - 서비스 계층 이하의 빈(@Service, @Repository 등)을 등록하기 위한 클래스
 
-● DispatcherServlet 클래스
-- 컨트롤러(@Controller, @Component)빈을 등록하기 위한 클래스
+- DispatcherServlet 클래스
+    - 컨트롤러(@Controller, @Component)빈을 등록하기 위한 클래스
 
-● ContextLoadListner
+- ContextLoadListner
 ```
 <context-param>
    <param-name>contextConfigLocation</param-name>
@@ -447,7 +447,7 @@ jdbcTemplate.update("DELETE FROM STUDENT WHERE ID=?", vo.getId());
 </context-param>
 ```
 
-● DispatcherServlet
+- DispatcherServlet
 ```
 <servlet>
    <!-- 프론트 컨트롤러(DispatcherServlet)를 서블릿 컨테이너에 등록 -->
@@ -466,19 +466,19 @@ jdbcTemplate.update("DELETE FROM STUDENT WHERE ID=?", vo.getId());
 </servlet-mapping>
 ```
 
-● 컨트롤러 기본 구조
-- 모든 컨트롤 클래스에넌 @Controller 애노테이션을 설정
-- 메소드 별로는 @Requestmapping 애노테이션을 사용하여 URL매핑을 설정
-- @RequestParam은 HTTP요청 파라미터를 메소드의 파리미터로 전달받을 때 사용한다.
-- 매소드의 반환값으로는 View의 이름을 반환한다 ex)memberList.jsp
+- 컨트롤러 기본 구조
+    - 모든 컨트롤 클래스에넌 @Controller 애노테이션을 설정
+    - 메소드 별로는 @Requestmapping 애노테이션을 사용하여 URL매핑을 설정
+    - @RequestParam은 HTTP요청 파라미터를 메소드의 파리미터로 전달받을 때 사용한다.
+    - 매소드의 반환값으로는 View의 이름을 반환한다 ex)memberList.jsp
 
-● 컨트롤러 등록
-- DispatcherServlet 클래스의 설정파일인 servlet-context.xml에서 컨트롤러 등록
-- DispatcherServlet 클래스 설정
-1. <annotation-driven/> : 패키지 내부에서 찾은 빈(컨트롤러)과 URI를 맵핑
-2. <context:component-scan base-package="org.kpu.web.controller"/> : base-package 내부의 클래스에서 @Controller지정된 컨트롤러를 검색하여 빈으로 등록
+- 컨트롤러 등록
+    - DispatcherServlet 클래스의 설정파일인 servlet-context.xml에서 컨트롤러 등록
+    - DispatcherServlet 클래스 설정
+    1. <annotation-driven/> : 패키지 내부에서 찾은 빈(컨트롤러)과 URI를 맵핑
+    2. <context:component-scan base-package="org.kpu.web.controller"/> : base-package 내부의 클래스에서 @Controller지정된 컨트롤러를 검색하여 빈으로 등록
 
-● @PathVariable 적용 변수로 전달
+- @PathVariable 적용 변수로 전달
 ```
 @RequestMapping(value="/try/{msg}", method = RequestMethod.GET)
 public String getUserTest(@PathVariable("msg") String msg){
@@ -486,23 +486,26 @@ public String getUserTest(@PathVariable("msg") String msg){
 }
 ```
 
-● @RequestParam 적용 변수로 전달
+- @RequestParam 적용 변수로 전달
 ```
 @RequestMapping(value="/tryA}", method = RequestMethod.GET)
 public String getUserTest(@RequestParam("msg") String msg){
 .....
 }
+```
 
-● @ModelAttribute 적용 변수로 전달
+- @ModelAttribute 적용 변수로 전달
+```
 @RequestMapping(value="/tryB}", method = RequestMethod.GET)
 public String getUserTest(@ModelAttribute("msg") String msg){
 .....
 }
+```
 
-● @RequestMapping(value={"/tryC", "/tryD"})
-- 배열 형태의 값을 지정할 수 있다.
-- tryC, tryD 양쪽 URL에 대응하는 메서드를 정의할 수 있다.
-- 요청 파라미터 값을 @ModelAttribute적용 변수로 전달한다.
+- @RequestMapping(value={"/tryC", "/tryD"})
+    - 배열 형태의 값을 지정할 수 있다.
+    - tryC, tryD 양쪽 URL에 대응하는 메서드를 정의할 수 있다.
+    - 요청 파라미터 값을 @ModelAttribute적용 변수로 전달한다.
 ```
 @RequestMapping(value={"/tryC", "/tryD"}, method = RequestMethod.GET)
 public String getUserTest(@ModelAttribute("msg") String msg){
@@ -510,54 +513,53 @@ public String getUserTest(@ModelAttribute("msg") String msg){
 }
 ```
 
-● Rest아키텍처
-- Rest(Representational State Transfer)는 클라이언트와 서버 사이에 데이터 연동 애플리케이션을 위한 아키텍처 스타일
-- 웹 상의 정보를 리소스로 파악하고 그 식별자로서 URI를 할당해 고유하게 주소를 지정하는 방법
+- Rest아키텍처
+    - Rest(Representational State Transfer)는 클라이언트와 서버 사이에 데이터 연동 애플리케이션을 위한 아키텍처 스타일
+    - 웹 상의 정보를 리소스로 파악하고 그 식별자로서 URI를 할당해 고유하게 주소를 지정하는 방법
 
-● Rest컨트롤러를 위한 라이브러리 설정
-- 리소스 형식을 JSON으로 사용
-- jackson-databind를 사용하면 JSON과 자바빈즈를 서로 교환할 수 있음
-```
-<dependency>
-   <groupId>com.fasterxml.jackson.core</groupId>
-   <artifactId>jackson-databind</artifactId>
-   <version>2.9.8</version>
-</dependency>
-```
+- Rest컨트롤러를 위한 라이브러리 설정
+    - 리소스 형식을 JSON으로 사용
+    - jackson-databind를 사용하면 JSON과 자바빈즈를 서로 교환할 수 있음
+    ```
+    <dependency>
+       <groupId>com.fasterxml.jackson.core</groupId>
+       <artifactId>jackson-databind</artifactId>
+       <version>2.9.8</version>
+    </dependency>
+    ```
 
-● @RestController : REST API를 제공하는 컨트롤러를 의미하고 @Controller와 @ResponseBody의 의미를 합침
+- @RestController : REST API를 제공하는 컨트롤러를 의미하고 @Controller와 @ResponseBody의 의미를 합침
 
-● @RequestBody : 컨트롤러 매서드 매개변수에 @RequestBody가 애노테이션된 경우, 스프링은 요청된 HTTP request body를 해당 매개변수에 바인딩 한다.
+- @RequestBody : 컨트롤러 매서드 매개변수에 @RequestBody가 애노테이션된 경우, 스프링은 요청된 HTTP request body를 해당 매개변수에 바인딩 한다.
 
-● @ResponseBody : 컨트롤러 메소드가 @ResponseBody로 애노테이션 된 경우, 스프링은 반환값을 나가는 HTTP response body에 바인딩한다.
+- @ResponseBody : 컨트롤러 메소드가 @ResponseBody로 애노테이션 된 경우, 스프링은 반환값을 나가는 HTTP response body에 바인딩한다.
 
-● RsponseEntity : 전체 HTTP응답을 나타내고 statusCode, headers, body 3가지 속성값을 지정할 수있다.
+- RsponseEntity : 전체 HTTP응답을 나타내고 statusCode, headers, body 3가지 속성값을 지정할 수있다.
 
-● XML연동 REST 컨트롤러
-- jaxb2RootElementHttpMessageConverter
-- XML 형식의 HTTP 메시지를 JAXB(Java Architecture for XML Binding)로 변환
-- JAXB는 JAVA 오브젝트와 XML 문서와 상호교환하는 자바의 표준 사양
-1. Servlet-context.xml
-```
-<annotation-driven validator="validator">
-   <message-converters>
-      <beans:bean class="org.springframework.http.converter.xml.
-Jaxb2RootElementHttpMessageConverter"/> 
-   </message-converters>
-</annotation-driven>
-```
+- XML연동 REST 컨트롤러
+    - jaxb2RootElementHttpMessageConverter
+    - XML 형식의 HTTP 메시지를 JAXB(Java Architecture for XML Binding)로 변환
+    - JAXB는 JAVA 오브젝트와 XML 문서와 상호교환하는 자바의 표준 사양
+    1. Servlet-context.xml
+    ```
+    <annotation-driven validator="validator">
+       <message-converters>
+          <beans:bean class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"/> 
+       </message-converters>
+    </annotation-driven>
+    ```
 
-2. root-context.xml
-```
-<bean id="validator" 
-class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
-</bean>
-```
-● Spring MVC에서의 예외처리
-- 컨트롤러 별로 예외처리
-1. 컨트롤러의 매소드에서 예외가 발생했을 때의 처리를 정의
-2. 별도의 예외처리 메소드를 정의하고 그 매소드에 @ExceptionHandler 애노테이션 설정
+    2. root-context.xml
+    ```
+    <bean id="validator" 
+    class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+    </bean>
+    ```
+- Spring MVC에서의 예외처리
+    - 컨트롤러 별로 예외처리
+        1. 컨트롤러의 매소드에서 예외가 발생했을 때의 처리를 정의
+        2. 별도의 예외처리 메소드를 정의하고 그 매소드에 @ExceptionHandler 애노테이션 설정
 
-- 하나의 웹 애플리케이션 안에서 공통된 예외처리
-1. 복수의 컨트롤러에서 사용할 수 있는 공통된 예외 처리 클래스를 정의
-2. 공통된 예외 처리 클래스를 정의하고 그 클래스어 @ControllerAdvice애노테이션을 설정
+    - 하나의 웹 애플리케이션 안에서 공통된 예외처리
+        1. 복수의 컨트롤러에서 사용할 수 있는 공통된 예외 처리 클래스를 정의
+        2. 공통된 예외 처리 클래스를 정의하고 그 클래스어 @ControllerAdvice애노테이션을 설정
