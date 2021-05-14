@@ -93,7 +93,9 @@
     - 최상위 엘리먼트(root element) : project
     - 3개의 필수 필드를 가진다
     >groupId : 프로젝트 조직 고유 도메인 예) org.kpu
+    >
     >artifactId : 프로젝트 명 예) myhomework
+    >
     >version : 프로젝트 버전
     - 프로젝트 의존관계의 라이브러리 관리 : dependency
 
