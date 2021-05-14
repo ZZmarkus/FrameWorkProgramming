@@ -92,11 +92,11 @@
     - 프로젝트 당 한개의 pom.xml파일 관리
     - 최상위 엘리먼트(root element) : project
     - 3개의 필수 필드를 가진다
-    >groupId : 프로젝트 조직 고유 도메인 예) org.kpu
-    >
-    >artifactId : 프로젝트 명 예) myhomework
-    >
-    >version : 프로젝트 버전
+        >groupId : 프로젝트 조직 고유 도메인 예) org.kpu
+        >
+        >artifactId : 프로젝트 명 예) myhomework
+        >
+        >version : 프로젝트 버전
     - 프로젝트 의존관계의 라이브러리 관리 : dependency
 
 - 프로젝트 빌드 설정
@@ -124,7 +124,7 @@
     </dependency>
 </dependencies>
 ```
-- 이렇게 작성된 코드가 있고 중앙 저장소에서 찾을 경우 groupId/artifactId/version에 존재하는 파일명 : ${artifactId}-${version}.jar 최종적으로 http://repo1.maven.org/maven2/junit/juint/3.8/junit-3.8.jar 파일을 다운로드한
+- 이렇게 작성된 코드가 있고 중앙 저장소에서 찾을 경우 groupId/artifactId/version에 존재하는 파일명 : ${artifactId}-${version}.jar 최종적으로 http://repo1.maven.org/maven2/junit/juint/3.8/junit-3.8.jar 파일을 다운로드한다
 
 - 위의 방법으로 할 때 중앙 저장소에서 관리하는 라이브러리의 수가 한두개가 아니라 이렇게 추가하는 것에는 한계가 있기 때문에 검색이 필요하다.
     - http://mvnrepository.com/
