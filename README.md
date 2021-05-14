@@ -33,4 +33,5 @@
 	- Spring MVC 아키텍처 이해
 	- Presentation Layer 동작 방식, Controller 구현
 	- REST 아키텍처 이해
-	- 예외 처리 방식 이해(https://github.com/ZZmarkus/FrameWorkProgramming/blob/main/Chap05/%EC%8A%A4%ED%94%84%EB%A7%81%20MVC.md)
+	- 예외 처리 방식 
+	- [📚 5장 내용정리](https://github.com/ZZmarkus/FrameWorkProgramming/blob/main/Chap05/%EC%8A%A4%ED%94%84%EB%A7%81%20MVC.md)
