@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 검사 URL -->
+    <http xmlns="http://www.springframework.org/schema/security">
+        <intercept-url pattern="/**" access="hasRole('USER')" />
+        <form-login />
+        <logout />
+    </http> 
+    <!-- 데이터베이스 인증 정보 관리 --> 
+    <security:authentication-manager>	
+        <security:authentication-provider>
+            <security:jdbc-user-service	   	
+            	data-source-ref="dataSource"
+            	users-by-username-query = "select id, passwd, true from student where id = ?"
+            	authorities-by-username-query = "select userid, rolename from user_role where userid = ?"           
+            />
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+</beans>

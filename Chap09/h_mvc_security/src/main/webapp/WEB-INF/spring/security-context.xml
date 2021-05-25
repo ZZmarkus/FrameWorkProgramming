@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+    <security:http>
+        <security:intercept-url pattern="/login.jsp" access="permitAll()" />
+        <security:intercept-url pattern="/top.jsp" access="permitAll()" />
+        <security:intercept-url pattern="/admin/**" access="hasAuthority('ROLE_ADMIN')" />
+        <security:intercept-url pattern="/**" access="isAuthenticated()" />
+        <security:form-login
+            default-target-url="/top.jsp"
+            always-use-default-target="true"   
+	       	login-page="/login.jsp"  
+        	login-processing-url="/processLogin"
+        	authentication-failure-url="/login.jsp"
+        	username-parameter="paramLoginId"
+        	password-parameter="paramPassword" />  
+ 
+        <security:logout 
+        	logout-url="/logout" 
+        	logout-success-url="/top.jsp" />
+        <security:csrf disabled="true" />
+    </security:http>
+    
+    <!-- authentication-manager configuration - authentication-manager object 생성 --> 
+    <!-- authentication-provider configuration - DaoAuthenicationProvider Object 생성 -->
+    <!-- user service configuration - InMemoryDaoImple object 생성 - UserDetailsService -->
+    
+    <!-- 메모리 인증 정보 관리  
+    <security:authentication-manager>	
+        <security:authentication-provider>
+            <security:user-service>
+                <security:user name="user" password="userpwd" authorities="ROLE_USER" />
+                <security:user name="admin" password="adminpwd" authorities="ROLE_ADMIN" />
+            </security:user-service>
+        </security:authentication-provider>
+    </security:authentication-manager>
+    -->
+     
+    <!-- 데이터베이스 인증 정보 관리 -->  
+    <security:authentication-manager>	
+        <security:authentication-provider>
+            <security:jdbc-user-service	   	
+            	data-source-ref="dataSource"
+            	users-by-username-query = "select id, passwd, true from student where id = ?"
+            	authorities-by-username-query = "select userid, rolename from user_role where userid = ?"           
+            />
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+</beans>
