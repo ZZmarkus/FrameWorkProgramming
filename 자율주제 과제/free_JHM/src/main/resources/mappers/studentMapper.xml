@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.kpu.myweb.mapper.StudentMapper">
+  
+ 	<select id="getTime" resultType="string">
+ 		select now()
+ 	</select>
+ 	
+     <insert id="insert"> 
+   		INSERT INTO student (id, passwd, username, mobile, email) values
+ 		(#{id}, #{passwd}, #{username}, #{mobile}, #{email})
+     </insert> 
+ 	
+ 	 <insert id="reservation">
+   		INSERT INTO reservation (resid, resname, resdate, resusername, resusermobile, resuseremail) values
+ 		(#{resid}, #{resname}, #{resdate}, #{resusername}, #{resusermobile}, #{resuseremail})
+     </insert> 
+ 	
+     <select id="selectByid" resultType="StudentVO">
+ 		SELECT * FROM student WHERE id = #{id}
+     </select>
+     
+
+     <select id="selectMyres" resultType="ReservVO">
+ 		SELECT * FROM reservation WHERE resid = #{id}
+     </select>
+
+     <select id="selectAll" resultType="org.kpu.myweb.domain.StudentVO">
+     <![CDATA[
+ 		SELECT * FROM student
+      ]]> 
+     </select>
+     
+     <select id="selectReservation" resultType="org.kpu.myweb.domain.ReservVO">
+     <![CDATA[
+ 		SELECT * FROM reservation
+      ]]> 
+     </select>
+ 	
+     <update id="update">
+	 	UPDATE reservation SET resid =#{resid}, resname =#{resname}, resdate =#{resdate}, 
+			 resusername =#{resusername}, resusermobile =#{resusermobile}, resuseremail =#{resuseremail} 
+		 WHERE resid =#{resid}
+    </update>
+ 
+    <delete id="delete">
+		DELETE FROM reservation WHERE resid = #{id}
+    </delete>
+	
+	
+</mapper>  
