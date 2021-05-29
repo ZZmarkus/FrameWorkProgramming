@@ -46,6 +46,11 @@
 			 resusername =#{resusername}, resusermobile =#{resusermobile}, resuseremail =#{resuseremail} 
 		 WHERE resid =#{resid}
     </update>
+    
+     <insert id="insertTransaction">
+	 	INSERT INTO transactionsample (resid, resname, resdate, resusername, resusermobile, resuseremail) values
+ 		(#{resid}, #{resname}, #{resdate}, #{resusername}, #{resusermobile}, #{resuseremail})
+    </insert>
  
     <delete id="delete">
 		DELETE FROM reservation WHERE resid = #{id}

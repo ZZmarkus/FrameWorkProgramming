@@ -16,4 +16,8 @@ public interface MemberService {
 	public void addReservation(ReservVO reserv) throws Exception;
 	public ReservVO readMyReserv(String id) throws Exception;
 	public List<ReservVO> readReservList() throws Exception;
+	
+	public void updateMemberList1(ReservVO student1) throws Exception;
+//	public void updateMemberList2(ReservVO student2) throws Exception;
+
 }

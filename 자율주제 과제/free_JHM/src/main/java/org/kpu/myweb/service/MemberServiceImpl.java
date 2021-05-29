@@ -8,6 +8,9 @@ import org.kpu.myweb.persistence.MemberDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Component
@@ -47,4 +50,19 @@ public class MemberServiceImpl implements MemberService {
 	public List<ReservVO> readReservList() throws Exception{
 		return memberDAO.readReservList();
 	}
+	
+	@Transactional ( propagation=Propagation.REQUIRED, isolation=Isolation.SERIALIZABLE, timeout=10 )
+	public void updateMemberList1(ReservVO res1) throws Exception {
+		// TODO Auto-generated method stub
+		memberDAO.Transactionupdate(res1);
+//		memberDAO.Transactionupdate(res2);
+	}
+	
+//	@Transactional ( propagation=Propagation.REQUIRED, isolation=Isolation.SERIALIZABLE, timeout=10 )
+//	public void updateMemberList2(ReservVO res2) throws Exception {
+//		// TODO Auto-generated method stub
+//		memberDAO.Transactionupdate(res2);
+//	}
+
+
 }

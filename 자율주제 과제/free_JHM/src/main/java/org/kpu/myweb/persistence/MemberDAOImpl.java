@@ -60,4 +60,8 @@ public class MemberDAOImpl implements MemberDAO {
 		reservlist = sqlSession.selectList(namespace + ".selectReservation");
 		return reservlist;
 	}
+	
+	public void Transactionupdate(ReservVO reserv) throws Exception{
+	    sqlSession.insert(namespace + ".insertTransaction", reserv);
+	}
 }

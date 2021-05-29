@@ -40,7 +40,8 @@
   	<context:component-scan base-package="org.kpu.myweb.persistence"></context:component-scan>
   	<context:component-scan base-package="org.kpu.myweb.service"></context:component-scan> 
    	<context:component-scan base-package="org.kpu.aop"></context:component-scan>
+	
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
-
-		
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
 </beans>

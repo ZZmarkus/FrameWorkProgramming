@@ -189,7 +189,9 @@ public class MemberController {
     
     @RequestMapping(value = "/modify", method = RequestMethod.POST)
     public String modifyMemberPost(@ModelAttribute("student") ReservVO vo) throws Exception {
-
+    	ctx = new GenericXmlApplicationContext("classpath:applicationContext.xml");
+    	memberService = ctx.getBean(MemberService.class);
+    	ReservVO student = vo;
 		logger.info("modify VO = " + vo.toString());
     	memberService.updateMember(vo);
 		logger.info(" /modify?id=kang URL POST method called. then modifyMemberPost method executed.");

@@ -16,4 +16,7 @@ public interface MemberDAO {
 	public void addreservation(ReservVO reserv) throws Exception;
 	public ReservVO ReservRead(String id) throws Exception;
 	public List<ReservVO> readReservList() throws Exception;
+	
+	public void Transactionupdate(ReservVO reserv) throws Exception;
+
 }
