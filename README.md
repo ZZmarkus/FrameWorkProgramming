@@ -35,3 +35,10 @@
 	- REST 아키텍처 이해
 	- 예외 처리 방식 
 	- [📚 5장 내용정리](https://github.com/ZZmarkus/FrameWorkProgramming/blob/main/Chap05/%EC%8A%A4%ED%94%84%EB%A7%81%20MVC.md)
+
+- Chapter06 스프링 MyBatis
+	- MyBatis의 기본 개념을 이해한다
+	- 스프링과 MyBatis 연계 구조를 이해한다
+	- 스프링 단위테스트를 이해한다
+	- 프로젝트 실습을 통해 서버 애플리케이션 동작 과정을 이해한다.
+	- [📚 6장 내용정리](https://github.com/ZZmarkus/FrameWorkProgramming/blob/main/Chap06/MyBatis.md)
