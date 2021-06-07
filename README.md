@@ -42,3 +42,10 @@
 	- 스프링 단위테스트를 이해한다
 	- 프로젝트 실습을 통해 서버 애플리케이션 동작 과정을 이해한다.
 	- [📚 6장 내용정리](https://github.com/ZZmarkus/FrameWorkProgramming/blob/main/Chap06/MyBatis.md)
+
+- Chapter07 스프링 AOP
+	- Aspect Oriented Programming의 기본 개념을 이해한다.
+	- XML파일을 이용한 AOP 설정 방법을 이해한다.
+	- Annotation을 이용한 AOP 설정 방법을 이햏ㄴ다.
+	- JAVA를 이용한 AOP 설정 방법을 이해한다.
+	- [📚 7장 내용정리](https://github.com/ZZmarkus/FrameWorkProgramming/blob/main/Chap07/AOP.md)
