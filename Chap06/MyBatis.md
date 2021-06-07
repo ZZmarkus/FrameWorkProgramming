@@ -20,6 +20,9 @@
 	- 매핑 파일 : SQL과 OR 매핑을 XML에 파일 기술
 	- org.mybatis.spring.SqlSessionTemplate : sqlSession 인터페이스를 구현
 
+- 스프링과 MyBatis 모듈과의 의존관계
+![Spring-MyBatis](https://user-images.githubusercontent.com/51106028/120983016-458f6c00-c7b4-11eb-8061-9c12835f147b.PNG)
+
 -MyBatis 연동을 위한 라이브러리
 	- spring-jdbc : 스프링이 제공하는 JDBC 래핑 모듈
 	- MyBatis-Spring : 마이바티스가 제공하는 프레임워크 간의 연동 라이브러리
