@@ -1,1 +1,0 @@
-- Filter와 인터셉터의 차이점 : DIspatcherServlet의 뒤에있냐 앞에있냐 차이 이유는 디스패처 서블렛 앞에있으면 컨트롤러나 서비스 객체를 주입받지 못하여 Context 접근이 어렵지만 DispatcherServlet 뒤에 있으면 컨트롤러나 서비스 객체를 주입받아서 Context내의 객체를 모두 사용할 수 있다.
