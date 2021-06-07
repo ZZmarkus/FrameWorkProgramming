@@ -49,3 +49,9 @@
 	- Annotation을 이용한 AOP 설정 방법을 이햏ㄴ다.
 	- JAVA를 이용한 AOP 설정 방법을 이해한다.
 	- [📚 7장 내용정리](https://github.com/ZZmarkus/FrameWorkProgramming/blob/main/Chap07/AOP.md)
+
+- Chapter08 스프링 Transaction
+	- 스프링 트랜잭션 개념을 이해한다.
+	- 스프링 트랜잭션 정의 정보를 이해한다.
+	- 스프링 트랜잭션 선언적 처리 2가지 방식을 이해한다.
+	- [📚 8장 내용정리](https://github.com/ZZmarkus/FrameWorkProgramming/blob/main/Chap08/Transaction.md)
